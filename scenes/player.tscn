@@ -37,7 +37,6 @@ script = ExtResource("1_qlg0r")
 position = Vector2(-123, -114)
 sprite_frames = SubResource("SpriteFrames_h45xw")
 animation = &"Walk"
-autoplay = "Walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1980010092]
 position = Vector2(-358, -338)
@@ -45,3 +44,7 @@ shape = SubResource("CapsuleShape2D_80iay")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=975387741]
 position = Vector2(-370, -317)
+process_callback = 0
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

@@ -3,10 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://437jfinw5jgg" path="res://scenes/player.tscn" id="1_qbsmt"]
 [ext_resource type="Texture2D" uid="uid://bcqxwyrb851lq" path="res://assets/Table.png" id="6_3xj3m"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbsmt"]
+size = Vector2(120, 231.5)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h45xw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0o143"]
 size = Vector2(560.0369, 370)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vc7y"]
+size = Vector2(183, 1909.25)
 
 [node name="Game" type="Node2D" unique_id=746243609]
 
@@ -14,6 +20,16 @@ size = Vector2(560.0369, 370)
 
 [node name="AnimatedSprite2D" parent="Player" index="0" unique_id=61520147]
 z_index = 5
+
+[node name="CollisionShape2D" parent="Player" index="1" unique_id=1980010092]
+position = Vector2(-370, -349.75)
+shape = SubResource("RectangleShape2D_qbsmt")
+
+[node name="Camera2D" parent="Player" index="2" unique_id=975387741]
+zoom = Vector2(0.8, 0.8)
+position_smoothing_enabled = false
+drag_horizontal_enabled = false
+drag_vertical_enabled = false
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=870457588]
 position = Vector2(330, 405)
@@ -28,5 +44,11 @@ texture = ExtResource("6_3xj3m")
 position = Vector2(918.5, -82)
 scale = Vector2(7.61914, 1)
 shape = SubResource("RectangleShape2D_0o143")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=619698003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1480720261]
+position = Vector2(-989, -587)
+shape = SubResource("RectangleShape2D_1vc7y")
 
 [editable path="Player"]
