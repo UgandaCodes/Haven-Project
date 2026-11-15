@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://3s0ae07ablii"]
+
+[ext_resource type="Texture2D" uid="uid://pen5u8ahytjm" path="res://assets/Crispy Golden Chicken Tender.png" id="1_fj5nw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vc7y"]
+size = Vector2(200, 616)
+
+[node name="Tender" type="Node2D" unique_id=710586146]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=794364882]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=874306673]
+position = Vector2(13, -61.000008)
+scale = Vector2(0.3828125, 0.43359375)
+texture = ExtResource("1_fj5nw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1423740846]
+position = Vector2(15, -60)
+shape = SubResource("RectangleShape2D_1vc7y")

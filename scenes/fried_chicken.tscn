@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bm7x4jl4cv75n"]
+
+[ext_resource type="Texture2D" uid="uid://dlbxpqmqtf5mk" path="res://assets/Golden Crispy Fried Chicken Drumstick.png" id="1_w4725"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vc7y"]
+size = Vector2(308, 812)
+
+[node name="Fried Chicken" type="Node2D" unique_id=1785044305]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=420643576]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=308475777]
+position = Vector2(-8.999996, 70)
+scale = Vector2(0.56675875, 0.5732044)
+texture = ExtResource("1_w4725")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=180575734]
+position = Vector2(8, 81)
+shape = SubResource("RectangleShape2D_1vc7y")

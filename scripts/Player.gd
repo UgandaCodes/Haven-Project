@@ -22,11 +22,10 @@ func _physics_process(delta: float) -> void:
 		
 		# Flip sprite based on direction (assuming default art faces right)
 		animated_sprite.flip_h = direction < 0
-		animated_sprite.play("Walk")
+		animated_sprite.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 		# Stop the animation and reset to the first frame when idle
-		animated_sprite.stop()
-		animated_sprite.frame = 0
+		animated_sprite.play("Idle")
 	move_and_slide()

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dw3yyfjfopc7u"
+path="res://.godot/imported/Fry Theme.wav-17638ba7600bf9e6012137f3f7b6ad0c.sample"
+
+[deps]
+
+source_file="res://assets/Fry Theme.wav"
+dest_files=["res://.godot/imported/Fry Theme.wav-17638ba7600bf9e6012137f3f7b6ad0c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

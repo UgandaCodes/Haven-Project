@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d0swtb183v7gn"]
+
+[ext_resource type="Texture2D" uid="uid://be6fbqarkw8i5" path="res://assets/Heinz Ketchup Packet Cutout.png" id="1_ud3yh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vc7y"]
+size = Vector2(422.75, 213)
+
+[node name="Ketchup Packet" type="Node2D" unique_id=2055056783]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=393226120]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1538970049]
+position = Vector2(-613, 285)
+scale = Vector2(0.27001125, 0.2564825)
+texture = ExtResource("1_ud3yh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1116968821]
+position = Vector2(-610.375, 287.5)
+shape = SubResource("RectangleShape2D_1vc7y")
