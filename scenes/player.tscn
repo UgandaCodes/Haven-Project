@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://437jfinw5jgg"]
+
+[ext_resource type="Script" uid="uid://djb46r8sr2x6p" path="res://scripts/Player.gd" id="1_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://bqskr8a0ssccm" path="res://assets/Idle1.png" id="2_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://byubsa3fyvlms" path="res://assets/Idle2 (1).png" id="3_fjrip"]
+[ext_resource type="Texture2D" uid="uid://cjaqnrn0qbkf5" path="res://assets/Idle3.png" id="4_smehm"]
+[ext_resource type="Texture2D" uid="uid://b62mkvhbeb6un" path="res://assets/Idle4.png" id="5_ur7pv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h45xw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tuyoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fjrip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_smehm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ur7pv")
+}],
+"loop": 1,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_80iay"]
+radius = 22.0
+height = 138.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1508523410]
+script = ExtResource("1_qlg0r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61520147]
+position = Vector2(-123, -114)
+sprite_frames = SubResource("SpriteFrames_h45xw")
+animation = &"Walk"
+autoplay = "Walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1980010092]
+position = Vector2(-358, -338)
+shape = SubResource("CapsuleShape2D_80iay")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=975387741]
+position = Vector2(-370, -317)
