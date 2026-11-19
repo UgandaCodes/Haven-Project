@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cq8dip21a8tc7"]
+
+[ext_resource type="Texture2D" uid="uid://bwnf2ia2ps77h" path="res://assets/WinScreen.png" id="1_wv5lq"]
+
+[node name="Win Screen" type="Node2D" unique_id=438905289]
+
+[node name="Control" type="Control" parent="." unique_id=194118910]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=846129016]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wv5lq")
+stretch_mode = 6

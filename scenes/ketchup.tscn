@@ -1,5 +1,17 @@
 [gd_scene format=3 uid="uid://b2cd1uyq7bixf"]
 
+[ext_resource type="Texture2D" uid="uid://boxcs7b0gpnu3" path="res://assets/Ketchup.png" id="1_iyh1g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1vc7y"]
+radius = 67.06713
+
 [node name="Ketchup" type="Node2D" unique_id=418550775]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=33143809]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2101378302]
+texture = ExtResource("1_iyh1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1521610652]
+position = Vector2(-12, -9)
+shape = SubResource("CircleShape2D_1vc7y")

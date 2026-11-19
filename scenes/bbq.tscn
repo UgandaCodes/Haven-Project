@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dk3tdixhu3wwg"]
+
+[ext_resource type="Texture2D" uid="uid://cdkp2w6cuoic2" path="res://assets/Sweet-Baby-Ray-s-Original-Barbecue-Sauce-18-oz_147b94a3-2e74-4e15-884e-68e44d4b32ca.8b74524bd9032e4ceff95a034d7244a4-removebg-preview.png" id="1_yfjvd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vc7y"]
+size = Vector2(104, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gj5j2"]
+size = Vector2(39, 90)
+
+[node name="BBQ" type="Node2D" unique_id=1279914826]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1949774365]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=784454716]
+position = Vector2(-2, -4.000004)
+scale = Vector2(0.397, 0.309)
+texture = ExtResource("1_yfjvd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=147604763]
+position = Vector2(-3, 26)
+shape = SubResource("RectangleShape2D_1vc7y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1736620122]
+position = Vector2(-1.5, -35)
+shape = SubResource("RectangleShape2D_gj5j2")

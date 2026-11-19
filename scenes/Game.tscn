@@ -1,47 +1,58 @@
 [gd_scene format=3 uid="uid://cq6ba5q5cgibg"]
 
 [ext_resource type="PackedScene" uid="uid://437jfinw5jgg" path="res://scenes/player.tscn" id="1_qbsmt"]
+[ext_resource type="Texture2D" uid="uid://qqkkt6wlaquh" path="res://assets/Reach the End Wooden Signores.png" id="4_78awf"]
+[ext_resource type="Texture2D" uid="uid://pen5u8ahytjm" path="res://assets/Crispy Golden Chicken Tender.png" id="5_aug50"]
 [ext_resource type="Texture2D" uid="uid://bcqxwyrb851lq" path="res://assets/Table.png" id="6_3xj3m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbsmt"]
-size = Vector2(120, 231.5)
+[ext_resource type="Texture2D" uid="uid://dlbxpqmqtf5mk" path="res://assets/Golden Crispy Fried Chicken Drumstick.png" id="6_kiw3p"]
+[ext_resource type="Texture2D" uid="uid://cdkp2w6cuoic2" path="res://assets/Sweet-Baby-Ray-s-Original-Barbecue-Sauce-18-oz_147b94a3-2e74-4e15-884e-68e44d4b32ca.8b74524bd9032e4ceff95a034d7244a4-removebg-preview.png" id="7_kiw3p"]
+[ext_resource type="AudioStream" uid="uid://dw3yyfjfopc7u" path="res://assets/Fry Theme.wav" id="8_g4kob"]
+[ext_resource type="PackedScene" uid="uid://d0swtb183v7gn" path="res://scenes/ketchup_packet.tscn" id="9_g4kob"]
+[ext_resource type="Script" uid="uid://bp75e20kc5alg" path="res://scripts/audio_stream_player.gd" id="9_qy1jj"]
+[ext_resource type="PackedScene" uid="uid://dk3tdixhu3wwg" path="res://scenes/bbq.tscn" id="10_qy1jj"]
+[ext_resource type="PackedScene" uid="uid://3s0ae07ablii" path="res://scenes/tender.tscn" id="11_mcffj"]
+[ext_resource type="PackedScene" uid="uid://babv5c6howu05" path="res://scenes/bounds.tscn" id="12_2rd6h"]
+[ext_resource type="PackedScene" uid="uid://bm7x4jl4cv75n" path="res://scenes/fried_chicken.tscn" id="13_2rd6h"]
+[ext_resource type="Texture2D" uid="uid://dl1ij5tploq02" path="res://assets/pngtree-frappuccino-clipart-cartoon-cup-with-chocolate-ice-cream-and-a-drink-png-image_11063024.png" id="14_7ua8r"]
+[ext_resource type="Script" uid="uid://mjsetglb302o" path="res://scripts/milk_shake.gd" id="14_y5y3l"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h45xw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0o143"]
-size = Vector2(560.0369, 370)
+size = Vector2(588.1897, 370)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vc7y"]
 size = Vector2(183, 1909.25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpaxk"]
+size = Vector2(176, 1678.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v40l7"]
+size = Vector2(100, 251)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa2jm"]
+size = Vector2(167.5, 162)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dpaxk"]
+radius = 101.0
+height = 294.0
+
 [node name="Game" type="Node2D" unique_id=746243609]
 
 [node name="Player" parent="." unique_id=1508523410 instance=ExtResource("1_qbsmt")]
-
-[node name="AnimatedSprite2D" parent="Player" index="0" unique_id=61520147]
-z_index = 5
-
-[node name="CollisionShape2D" parent="Player" index="1" unique_id=1980010092]
-position = Vector2(-370, -349.75)
-shape = SubResource("RectangleShape2D_qbsmt")
-
-[node name="Camera2D" parent="Player" index="2" unique_id=975387741]
-zoom = Vector2(0.8, 0.8)
-position_smoothing_enabled = false
-drag_horizontal_enabled = false
-drag_vertical_enabled = false
+position = Vector2(-116, 79)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=870457588]
 position = Vector2(330, 405)
 physics_material_override = SubResource("PhysicsMaterial_h45xw")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=830702228]
-position = Vector2(1048, 52)
+position = Vector2(998, 90)
 scale = Vector2(8.813477, 2.0683594)
 texture = ExtResource("6_3xj3m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1513933607]
-position = Vector2(918.5, -82)
+position = Vector2(1006.2501, -27)
 scale = Vector2(7.61914, 1)
 shape = SubResource("RectangleShape2D_0o143")
 
@@ -51,4 +62,106 @@ shape = SubResource("RectangleShape2D_0o143")
 position = Vector2(-989, -587)
 shape = SubResource("RectangleShape2D_1vc7y")
 
-[editable path="Player"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1028587189]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=434675858]
+position = Vector2(-695, 34)
+scale = Vector2(0.34114584, 0.30371094)
+texture = ExtResource("4_78awf")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=459110268]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=1594553697]
+position = Vector2(481, -304.25)
+scale = Vector2(0.2548828, 0.6044922)
+texture = ExtResource("5_aug50")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D4" unique_id=409688170]
+position = Vector2(494, -1104.0001)
+scale = Vector2(0.28959486, 0.4713398)
+texture = ExtResource("6_kiw3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1047889850]
+position = Vector2(461, -654)
+shape = SubResource("RectangleShape2D_dpaxk")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=1779316290]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=2017986657]
+position = Vector2(-46, -454)
+scale = Vector2(0.581, 0.6320002)
+texture = ExtResource("7_kiw3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1005046440]
+position = Vector2(-69, -530)
+shape = SubResource("RectangleShape2D_v40l7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D5" unique_id=248002404]
+position = Vector2(-54, -382)
+shape = SubResource("RectangleShape2D_sa2jm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=555385619]
+stream = ExtResource("8_g4kob")
+volume_db = 6.386
+autoplay = true
+script = ExtResource("9_qy1jj")
+
+[node name="Ketchup Packet" parent="." unique_id=2055056783 instance=ExtResource("9_g4kob")]
+position = Vector2(757, -264)
+
+[node name="Ketchup Packet2" parent="." unique_id=1128767628 instance=ExtResource("9_g4kob")]
+position = Vector2(287, -1203)
+
+[node name="BBQ" parent="." unique_id=1279914826 instance=ExtResource("10_qy1jj")]
+position = Vector2(221, -1324)
+scale = Vector2(3, 3)
+
+[node name="Tender" parent="." unique_id=710586146 instance=ExtResource("11_mcffj")]
+position = Vector2(1035, -109)
+rotation = 0.8150688
+scale = Vector2(0.5, 0.5)
+
+[node name="Ketchup Packet3" parent="." unique_id=53318468 instance=ExtResource("9_g4kob")]
+position = Vector2(2139, -561)
+
+[node name="BBQ2" parent="." unique_id=663088451 instance=ExtResource("10_qy1jj")]
+position = Vector2(1870, -547)
+scale = Vector2(2, 2)
+
+[node name="Bounds" parent="." unique_id=805984965 instance=ExtResource("12_2rd6h")]
+position = Vector2(1252, -74)
+scale = Vector2(3, 3)
+
+[node name="Bounds2" parent="." unique_id=1887497769 instance=ExtResource("12_2rd6h")]
+position = Vector2(1035, 87)
+scale = Vector2(3, 3)
+
+[node name="Fried Chicken" parent="." unique_id=1785044305 instance=ExtResource("13_2rd6h")]
+position = Vector2(2265.9998, -139)
+rotation = 1.5620697
+scale = Vector2(0.5, 0.5)
+
+[node name="Tender2" parent="." unique_id=1978245640 instance=ExtResource("11_mcffj")]
+position = Vector2(2487, -468)
+
+[node name="Fried Chicken2" parent="." unique_id=1661373651 instance=ExtResource("13_2rd6h")]
+position = Vector2(2495, -1320)
+
+[node name="BBQ3" parent="." unique_id=1610142302 instance=ExtResource("10_qy1jj")]
+position = Vector2(1668.0001, -22)
+scale = Vector2(3, 3)
+
+[node name="Ketchup Packet4" parent="." unique_id=505677927 instance=ExtResource("9_g4kob")]
+position = Vector2(3508, -177)
+
+[node name="MilkShake" type="Area2D" parent="." unique_id=415110972]
+script = ExtResource("14_y5y3l")
+
+[node name="MilkShakeSprite" type="Sprite2D" parent="MilkShake" unique_id=1732997074]
+position = Vector2(3398, 9)
+scale = Vector2(0.365, 0.3029167)
+texture = ExtResource("14_7ua8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MilkShake" unique_id=123988961]
+position = Vector2(3392, 26)
+shape = SubResource("CapsuleShape2D_dpaxk")
